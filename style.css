@@ -1,0 +1,63 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cuadrado {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  border: solid white 20px;
+  border-radius: 50%;
+  border-left-color: #222831;
+  border-top-color: #393e46;
+  border-right-color: #00adb5;
+  border-bottom-color: #eeeeee;
+  overflow: hidden; /*Evita el espacio entre el borde y la imagen*/
+}
+.contenido {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.contenido img {
+  width: calc(100% - 0.1px); /* Reduce ligeramente el tamaño de la imagen */
+  height: calc(100% - 0.1px); /* Reduce ligeramente el tamaño de la imagen */
+  object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo la proporción */
+  border-radius: 50%; /* Asegura que la imagen se muestre como un círculo */
+}
+
+/* with gradient */
+/* .cuadrado {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%; 
+  overflow: hidden;
+}
+.gradiente {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from 0deg,
+    #222831,
+    #393e46,
+    #00adb5,
+    #eeeeee,
+    #222831
+  );
+} */
